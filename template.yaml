@@ -7,7 +7,7 @@ Resources:
   Products:
     Type: AWS::Serverless::Function
     Properties:
-      Handler: edu.knoldus.SendMail
+      Handler: edu.knoldus.SendEmail
       CodeUri: ./target/aws-lambda-demo-1.0-SNAPSHOT.jar
       Runtime: java8
       Timeout: 300

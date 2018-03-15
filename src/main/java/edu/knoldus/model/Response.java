@@ -2,14 +2,14 @@ package edu.knoldus.model;
 
 public class Response {
 
-    private String message;
+    private String body;
 
-    public Response(String message) {
-        this.message = message;
+    public Response(String body) {
+        this.body = body;
     }
 
-    public String getMessage() {
-        return message;
+    public String getBody() {
+        return body;
     }
 
 }
