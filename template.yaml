@@ -1,0 +1,22 @@
+AWSTemplateFormatVersion : '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: KnolFest Demo AWS Lambda.
+
+Resources:
+
+  Products:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: edu.knoldus.SendMail
+      CodeUri: ./target/aws-lambda-demo-1.0-SNAPSHOT.jar
+      Runtime: java8
+      Timeout: 300
+      Environment:
+        Variables:
+          ENVIRONMENT: "test"
+      Events:
+        ListProducts:
+          Type: Api
+          Properties:
+            Path: /sendmail
+            Method: post
